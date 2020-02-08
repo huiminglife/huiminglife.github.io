@@ -1,0 +1,104 @@
+/* CSS Opinioned Reset */
+* { box-sizing: border-box; }
+
+a { text-decoration: none; }
+
+img { max-width: 100%; max-height: 100%; }
+
+nav ul { display: block; list-style: none; margin: 0; padding: 0; }
+
+nav ul li { display: block; }
+
+/* Overall Layout */
+body { padding: 1rem; margin: 0; min-width: 320px; font-family: sans-serif; }
+
+.header h1 { margin-top: 0.5rem; }
+
+.header .subtitle { margin-top: 1rem; margin-bottom: 2rem; }
+
+.hidden { display: none !important; }
+
+.overlay { position: fixed; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(255, 255, 255, 0.8); }
+
+/* Navigation */
+.links { line-height: 2.3rem; }
+
+.links a { font-size: 1.3rem; color: black; }
+
+.links a:hover { opacity: 0.5; }
+
+.overlay .links { padding: 2rem; }
+
+/* Footer */
+.footer .social { padding: 1rem 0; }
+
+.footer .social a { padding-right: 0.25rem; }
+
+.footer .social .icon svg { width: 2rem; height: 2rem; }
+
+.footer .social .username { display: none; }
+
+.footer .copyright { font-size: 0.8rem; }
+
+@media screen and (max-width: 767px) { .header { display: flex; flex-flow: row wrap; justify-content: space-between; align-items: baseline; padding-top: 0.5rem; }
+  .header .title { order: 1; flex: 1; }
+  .header .nav { order: 1; }
+  .header .subtitle { order: 2; width: 100%; margin-bottom: 1rem; }
+  .footer { padding: 1rem 0; }
+  /* Navigation */
+  .header .nav .links { display: none; }
+  .header .nav .menu { position: relative; width: 24px; height: 20px; cursor: pointer; }
+  .header .nav .menu .icon, .header .nav .menu .icon:before, .header .nav .menu .icon:after { position: absolute; width: 100%; height: 3px; background-color: black; content: ''; }
+  .header .nav .menu .icon { top: 8px; }
+  .header .nav .menu .icon:before { content: ''; top: -8px; }
+  .header .nav .menu .icon:after { content: ''; top: 8px; } }
+
+@media screen and (min-width: 768px) { body { display: flex; flex-flow: column wrap; align-items: flex-start; height: 100vh; }
+  .header, .footer { width: 30%; order: 1; padding-left: 1rem; padding-right: 1rem; }
+  .header { flex: 1; padding-top: 1rem; }
+  .footer { padding-bottom: 1rem; }
+  .main { width: 70%; order: 2; flex: 1 0 100%; overflow: auto; }
+  /* Navigation */
+  .header .menu { display: none; } }
+
+@media screen and (min-width: 1024px) { .header, .footer { padding-left: 3rem; padding-right: 3rem; }
+  .header { padding-top: 3rem; }
+  .footer { padding-bottom: 3rem; } }
+
+.home-content { width: 100%; }
+
+.home-content .pager { padding: 1rem 0; }
+
+.home-content .pager ul { display: flex; justify-content: space-between; }
+
+.home-content .pager li { display: block; text-align: center; font-size: 1.3rem; width: 50%; padding: 0 0.5rem; }
+
+.home-content .pager a { display: block; width: 100%; height: 100%; color: white; background-color: black; padding: 1rem; }
+
+.home-content .post { width: 50%; padding: 0.5rem; position: relative; }
+
+.home-content .post img { width: 100%; display: block; }
+
+.home-content .post header { position: absolute; left: 0; right: 0; top: 0; bottom: 0; padding: 0.5rem; display: none; }
+
+.home-content .post:hover header, .home-content .post.no-image header { display: block; }
+
+.home-content .post header a { width: 100%; height: 100%; padding: 0.5rem; margin: 0; display: flex; flex-flow: column; justify-content: center; align-items: center; color: white; background-color: rgba(0, 0, 0, 0.6); }
+
+.home-content .post .place-holder { width: 100%; height: 15rem; background-color: gray; }
+
+@media screen and (max-width: 767px) { .home-content { margin: 0 -0.5rem; } }
+
+.gallery ul { list-style: none; width: 100%; padding: 0; margin: 0 -0.25rem; display: flex; flex-flow: row wrap; }
+
+.gallery li { display: block; height: 20vh; padding: 0.25rem; cursor: pointer; }
+
+.gallery img { height: 100%; }
+
+.gallery .gallery-overlay img { height: auto; }
+
+.gallery .gallery-overlay { position: fixed; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(255, 255, 255, 0.8); display: flex; justify-content: center; align-items: center; padding: 1rem; }
+
+.post-content .content { padding: 1rem 0; }
+
+/*# sourceMappingURL=overall.css.map */
